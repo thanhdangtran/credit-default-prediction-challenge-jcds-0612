@@ -6,7 +6,7 @@ Cuộc thi Kaggle **Credit Default Prediction Challenge – JCDS 0612** nhằm x
 - **Input**: Hồ sơ khách hàng tín dụng (giới tính, hôn nhân, học vấn, độ tuổi, hạn mức tín dụng, lịch sử thanh toán, dư nợ, khoản thanh toán hàng tháng).  
 - **Output**: Xác suất (`default_payment_next_month`) khách hàng vỡ nợ (default = 1, non-default = 0).  
 - **Evaluation metric**: AUC (Area Under ROC Curve).  
-
+https://www.kaggle.com/code/ngtrnthnh/credit-default-prediction-challenge
 ---
 
 ## 2. Dataset
