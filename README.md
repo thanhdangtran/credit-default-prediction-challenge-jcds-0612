@@ -6,7 +6,7 @@ Cuộc thi Kaggle **Credit Default Prediction Challenge – JCDS 0612** nhằm x
 - **Input**: Hồ sơ khách hàng tín dụng (giới tính, hôn nhân, học vấn, độ tuổi, hạn mức tín dụng, lịch sử thanh toán, dư nợ, khoản thanh toán hàng tháng).  
 - **Output**: Xác suất (`default_payment_next_month`) khách hàng vỡ nợ (default = 1, non-default = 0).  
 - **Evaluation metric**: AUC (Area Under ROC Curve).  
-https://www.kaggle.com/code/ngtrnthnh/credit-default-prediction-challenge
+- **Notebook Kaggle**: https://www.kaggle.com/code/ngtrnthnh/credit-default-prediction-challenge
 ---
 
 ## 2. Dataset
@@ -57,20 +57,12 @@ Nguồn dữ liệu: bộ tín dụng thực tế từ ngân hàng Đài Loan.
 Áp dụng **3 mô hình boosting chính** + ensemble:  
 
 1. **LightGBM (LGBMClassifier)**  
-   - Ưu điểm: nhanh, xử lý feature số + cat tốt.  
-   - Tham số: `num_leaves=31`, `max_depth=-1`, `lambda_l2=10`, `feature_fraction=0.9`, `bagging_fraction=0.9`.  
 
 2. **XGBoost (XGBClassifier)**  
-   - Ưu điểm: ổn định, benchmark chuẩn trong credit risk.  
-   - Tham số: `max_depth=6`, `subsample=0.8`, `colsample_bytree=0.8`, `reg_lambda=5`.  
 
 3. **CatBoost (CatBoostClassifier)**  
-   - Ưu điểm: xử lý categorical trực tiếp.  
-   - Tham số: `depth=6`, `learning_rate=0.05`, `l2_leaf_reg=5.0`.  
 
 4. **Ensemble / Stacking**  
-   - Rank average các model.  
-   - Logistic Regression meta-model trên OOF predictions.  
 
 ---
 
@@ -87,16 +79,10 @@ Nguồn dữ liệu: bộ tín dụng thực tế từ ngân hàng Đài Loan.
 - **Public Score**: 0.80217  
 - **Private Score**: 0.76818  
 
-📌 **Nhận xét**:  
-- Public score cao nhưng Private score thấp hơn → dấu hiệu overfit public set.  
-- CV ~0.79 sát với Private 0.768 → mô hình có generalization trung bình, cần cải thiện bằng regularization + feature engineering.  
-
 ---
 
 ## 6. Kết luận
 - 3 mô hình boosting (LGB, XGB, CAT) đều cho AUC sát nhau ~0.79.  
-- Ensemble giúp tăng nhẹ AUC và ổn định hơn.  
-- Vấn đề chính: private score drop so với public → cần giảm overfitting bằng:
-  - Regularization mạnh hơn  
-  - Ensemble nhiều seeds  
-  - Feature engineering dựa trên tín dụng thực tế (ratio, trend, interaction).  
+- Các mô hình không lệch nhiều, chứng tỏ dataset clean, thông tin vừa đủ
+
+
