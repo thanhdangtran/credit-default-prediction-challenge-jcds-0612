@@ -100,4 +100,3 @@ Nguồn dữ liệu: bộ tín dụng thực tế từ ngân hàng Đài Loan.
   - Regularization mạnh hơn  
   - Ensemble nhiều seeds  
   - Feature engineering dựa trên tín dụng thực tế (ratio, trend, interaction).  
-"""
