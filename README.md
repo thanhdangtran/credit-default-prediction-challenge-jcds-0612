@@ -1,6 +1,3 @@
-# ============================== CELL: Generate README.md ==============================
-
-readme_text = """
 # 🏦 Credit Default Prediction Challenge (JCDS 0612)
 
 ## 1. Yêu cầu cuộc thi
@@ -104,9 +101,3 @@ Nguồn dữ liệu: bộ tín dụng thực tế từ ngân hàng Đài Loan.
   - Ensemble nhiều seeds  
   - Feature engineering dựa trên tín dụng thực tế (ratio, trend, interaction).  
 """
-
-# Ghi ra file
-with open("README.md", "w", encoding="utf-8") as f:
-    f.write(readme_text)
-
-print("✅ README.md generated successfully!")
