@@ -1,0 +1,45 @@
+{
+  "time": "20250827-153644",
+  "seeds": [
+    42,
+    2021,
+    7,
+    99,
+    1234
+  ],
+  "base_models": [
+    "lgb",
+    "cat"
+  ],
+  "auc": {
+    "lgb_mean_auc": 0.7852269839461659,
+    "cat_mean_auc": 0.7903813723072656,
+    "ensemble_rank": 0.7909504860872938,
+    "stack_lr": 0.7913609781075402,
+    "final_rank": 0.7911178085495633
+  },
+  "train_rows": 23000,
+  "test_rows": 7000,
+  "n_features": 19,
+  "features": [
+    "LIMIT_BAL",
+    "LIMIT_BAL_log",
+    "AGE",
+    "SEX",
+    "EDUCATION",
+    "MARRIAGE",
+    "util_mean",
+    "util_max",
+    "bill_diff_mean",
+    "bill_diff_std",
+    "payr_mean",
+    "payr_max",
+    "pay_recency",
+    "pay_max",
+    "pay_wsum",
+    "consec_delay",
+    "cum_unpaid",
+    "over_limit_sum",
+    "edu_util"
+  ]
+}
